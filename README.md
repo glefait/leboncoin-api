@@ -59,11 +59,22 @@ search.run().then(function (data) {
     data.results[0].getPhoneNumber().then(function (phoneNumer) {
         console.log(phoneNumer); // the phone number of the author if available
     }, function (err) {
-        console.error(err); // if the phone number is not available or not parsable (image -> string) 
+        console.error(err); // if the phone number is not available or not parsable (image -> string)
     });
 }, function (err) {
     console.error(err);
 });
 ```
+
+## As an express web app
+Routes are defined within `server.js`. Have fun.
+
+Run it directly (with or without an existing `package-lock.json`)
+
+    npm start
+
+Or through docker or docker-compose
+
+    docker-compose up
 
 ## License MIT
